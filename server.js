@@ -30,13 +30,13 @@ db;
 //   res.end();
 // });
 
-app.get("/senators/get", getAll);
+app.get("/api/senators/get", getAll);
 
-app.get("/search/state/:id", searchByState);
-app.get("/search/name/:id", searchByName);
-app.post("/add", add);
-app.put("/edit/:id", edit);
-app.delete("/delete/:id", deleted);
+app.get("/api/search/state/:id", searchByState);
+app.get("/api/search/name/:name", searchByName);
+app.post("/api/add", add);
+app.put("/api/senator/edit/:id", edit);
+app.delete("/api/delete/:id", deleted);
 
 app.listen(4000, () => {
   console.log("Sever listening on port 4000");
