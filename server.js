@@ -25,10 +25,10 @@ app.use((req, res, next) => {
   next();
 });
 db;
-// app.use("/", (req, res, next) => {
-//   res.send("Server up and running");
-//   res.end();
-// });
+app.use("/", (req, res, next) => {
+  res.send("Server up and running");
+  res.end();
+});
 
 app.get("/api/senators/get", getAll);
 
